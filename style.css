@@ -3,59 +3,159 @@
   padding: 0;
   box-sizing: border-box;
 }
-.navbar {
-  display: flex;
+.header {
+  padding: 10px 20px;
+  position: sticky;
 }
-ul {
-  display: flex;
-  list-style-type: none;
-  margin-top: 50px;
-  margin-left: 50px;
-  justify-content: space-evenly;
-}
-li,a{
-    margin-left: 10px;
-    font-size: normal;
-    font-weight: 100;
-    justify-items: flex-start;
-    justify-content: space-evenly;
-    text-decoration: none;
-    color: black;
-}
-.logo {
+.logo,
+img {
   font-size: 30px;
+  font-weight: bold;
+  height: 60px;
+  width: 60px;
 }
-.logo-image {
-  width: 100px;
-  height: 40px;
-  margin: 40px;
-  
+.rightSide {
+  margin-left: 100px;
 }
-.btn{
-    display: flex;
-justify-content: space-evenly;
-margin-top: 50px;
-margin-left:350px;
-gap: 10px;
+.leftSide,
+ul,
+li {
+  display: inline;
+  padding: 10px 10px;
+  list-style-type: none;
+  text-decoration: none;
 }
-.login.btn{
-    background-color: #f0f0f0;
-    border: 1px solid #000;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: 100;
-}
-.signup{
-    background-color: #108A00;
-    border: 1px solid #000;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: 100;
-}
-#signup{
-    background-color: #0f7b00;
-    color: white;
-    padding: 10px 20px;
+ul,
+li,
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  &:hover {
+    color: #14a800; /* Upwork green */
+  }
+  transition: color 0.3s ease-in-out;
 }
 
+.header div {
+  display: inline-block;
+}
 
+.rightSide,
+.leftSide {
+  float: left;
+}
+
+.signup-button {
+  padding: 15px 30px;
+  background: #14a800; /* Upwork green */
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.login-button {
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  height: 550px;
+  background: url("./public/hero1.jpeg") center/cover;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Dark overlay so text is readable */
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 50%;
+}
+
+.tag {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 2.2rem;
+  line-height: 1.1;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.sub {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* --- Green cards --- */
+.cta-grid {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.cta {
+  background: #0bd626; /* Upwork‑style green */
+  color: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 200px;
+  text-decoration: none;
+  transition: transform 0.25s;
+}
+
+.cta:hover {
+  transform: translateY(-4px);
+}
+
+.cta strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+.small {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+/* general reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* main section layout */
+.hero {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
